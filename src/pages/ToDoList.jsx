@@ -1,47 +1,36 @@
-import React, {useState} from "react";
+import React, { useState } from 'react';
+import { Dropdown } from 'flowbite-react';
+import DropDownBtn from '../ChildComponents/DropDownBtn';
 
 
 
+function ToDoList() {
+  const Dropdown = ({ label, onClick, children }) => {
+    const [isOpen, setIsOpen] = useState(false);
 
-function ToDoList(){
+    const toggleDropdown = () => {
+      const [selectedItem, setSelectedItem] = useState(null);
 
-  const [isSubMenuVisible, setSubMenuVisible] = useState(false);
+    const handleDropdownClick = (item) => {
+        setSelectedItem(item);
+        // Add any other logic you need
+    };
 
-    const toggleSubMenu = () => {
-        setSubMenuVisible(!isSubMenuVisible);
-      };
-    return(
 
-        <>
-       <ul className="menu">
-      <li className="menu-item display">
-        <a href="javascript:void(0)" className="menu-link right-arrow" onClick={toggleSubMenu}>
-          <span className="menu-icon">
-            <i className="fa-regular fa-envelope"></i>
-            <span className="menu-text side-menu-user"> To do list </span>
-          </span>
-          <span className="menu-arrow">
-            <i className="fa-solid fa-chevron-right right-icon side-menu-user"></i>
-          </span>
-        </a>
+    return (
 
-        <ul className={`sub-menu ${isSubMenuVisible ? '' : 'hidden'}`}>
-          <li className="menu-item">
-            <a href="email-inbox.html" className="menu-link" role="menuitem">
-              <span className="menu-text">Open Task</span>
-            </a>
-          </li>
-          <li className="menu-item">
-            <a href="email-templates.html" className="menu-link">
-              <span className="menu-text">All Task</span>
-            </a>
-          </li>
-        </ul>
-      </li>
-    </ul>
 
-        
-        </>
+      <>
+         <div>
+            <DropDownBtn onClick={() => handleDropdownClick('Dashboard')}>
+                short By
+            </DropDownBtn>
+            {/* Add more DropDownBtn components as needed */}
+            {selectedItem && <p>Selected Item: {selectedItem}</p>}
+        </div>
+
+      </>
     )
+  }
 }
 export default ToDoList;

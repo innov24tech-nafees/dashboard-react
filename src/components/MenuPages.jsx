@@ -13,7 +13,7 @@ import userF from '../img/user-1.jpg';
 import SideMenu from "../SmallPages/SideMenu";
 
 // import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faList, faUsers,  faArrowAltCircleRight, faBullseye, faTimes, faClock, faPlus, faListUl, faPhoneVolume, faVectorSquare, faClockRotateLeft, faCalendarDay, faTableList, faPenClip } from '@fortawesome/free-solid-svg-icons';
+import { faList, faUsers, faArrowAltCircleRight, faBullseye, faTimes, faClock, faPlus, faListUl, faPhoneVolume, faVectorSquare, faClockRotateLeft, faCalendarDay, faTableList, faPenClip } from '@fortawesome/free-solid-svg-icons';
 
 
 function MenuPages() {
@@ -22,15 +22,15 @@ function MenuPages() {
     const [isSubMenuVisible, setSubMenuVisible] = useState(false);
 
     const todoMenuItems = [
-        { id: 1, text: 'Open Tasks', link: 'email-index.html',  icons: faClock},
+        { id: 1, text: 'Open Tasks', link: 'email-index.html', icons: faClock },
         { id: 2, text: 'All Tasks', link: 'email-templates.html', icons: faClock },
 
     ]
 
     const contactMenuItems = [
-        { id: 1, text: 'Create Contact', link: 'email-index.html', icons: faPlus},
+        { id: 1, text: 'Create Contact', link: 'email-index.html', icons: faPlus },
         { id: 2, text: 'All Contacts', link: 'email-templates.html', icons: faListUl },
-        { id: 3, text: 'Cold Calling', link: 'email-inbox.html', icons:faPhoneVolume },
+        { id: 3, text: 'Cold Calling', link: 'email-inbox.html', icons: faPhoneVolume },
     ]
 
     const leadsMenuItems = [
@@ -52,19 +52,40 @@ function MenuPages() {
         { id: 7, text: "Calendar", link: 'email-inbox.html', icons: faCalendarDay },
     ]
     const propertiesMenuItems = [
-        { id: 1, text: 'Create Property', link: 'email-index.html', icons: faClock  },
-        { id: 2, text: 'Available Projects', link: 'email-templates.html', icons: faVectorSquare  },
+        { id: 1, text: 'Create Property', link: 'email-index.html', icons: faClock },
+        { id: 2, text: 'Available Projects', link: 'email-templates.html', icons: faVectorSquare },
         { id: 3, text: 'All Projects', link: 'email-inbox.html', icons: faListUl },
-        { id: 4, text: 'RERA/HIRA Projects', link: 'email-inbox.html', icons: faListUl  },
-        { id: 5, text: 'RERA/HIRA Projects', link: 'email-inbox.html', icons: faClock  },
-        { id: 6, text: 'RERA/HIRA Projects', link: 'email-inbox.html', icons: faClockRotateLeft  },
+        { id: 4, text: 'RERA/HIRA Projects', link: 'email-inbox.html', icons: faListUl },
+        { id: 5, text: 'RERA/HIRA Projects', link: 'email-inbox.html', icons: faClock },
+        { id: 6, text: 'RERA/HIRA Projects', link: 'email-inbox.html', icons: faClockRotateLeft },
     ]
-    // const projectsMenuItems = [
-    //     { id: 1, text: 'Create Project', link: 'email-index.html' },
-    //     { id: 2, text: 'Available Projects', link: 'email-templates.html' },
-    //     { id: 3, text: 'All Projects', link: 'email-inbox.html' },
-    //     { id: 3, text: 'RERA/HIRA Projects', link: 'email-inbox.html' },
-    // ]
+    const projectsMenuItems = [
+        { id: 1, text: 'Create Project', link: 'email-index.html' },
+        { id: 2, text: 'Available Projects', link: 'email-templates.html' },
+        { id: 3, text: 'All Projects', link: 'email-inbox.html' },
+        { id: 3, text: 'RERA/HIRA Projects', link: 'email-inbox.html' },
+    ]
+
+    const sitevisitsMenuItems = [
+        { id: 1, text: 'Create Project', link: 'email-index.html' },
+        { id: 2, text: 'Available Projects', link: 'email-templates.html' },
+        { id: 3, text: 'All Projects', link: 'email-inbox.html' },
+        { id: 3, text: 'RERA/HIRA Projects', link: 'email-inbox.html' },
+    ]
+
+    const templatesMenuItems = [
+        { id: 1, text: 'Create Project', link: 'email-index.html' },
+        { id: 2, text: 'Available Projects', link: 'email-templates.html' },
+        { id: 3, text: 'All Projects', link: 'email-inbox.html' },
+        { id: 3, text: 'RERA/HIRA Projects', link: 'email-inbox.html' },
+    ]
+
+    const campaignsMenuItems = [
+        { id: 1, text: 'Create Project', link: 'email-index.html' },
+        { id: 2, text: 'Available Projects', link: 'email-templates.html' },
+        { id: 3, text: 'All Projects', link: 'email-inbox.html' },
+        { id: 3, text: 'RERA/HIRA Projects', link: 'email-inbox.html' },
+    ]
 
     const toggleSubMenu = () => {
         setSubMenuVisible(!isSubMenuVisible);
@@ -190,43 +211,42 @@ function MenuPages() {
                         PagesName="Opportunities"
                         menuList={opportunitiMenuItems}
                         icons={faBullseye}
-                        
+
                     />
                     <SideMenu
                         PagesName="Properties"
                         menuList={propertiesMenuItems}
                         icons={faTableList}
                     />
+                    <SideMenu
+                        PagesName="Projects"
+                        menuList={projectsMenuItems}
+                        icons={faTableList}
+                    />
+
+                    <SideMenu
+                        PagesName="SiteVisits"
+                        menuList={sitevisitsMenuItems}
+                        icons={faTableList}
+                    />
+
+
+                    <li className="menu-title side-menu-user">Marketing Campaign</li>
+
+                    <SideMenu
+                        PagesName="Templates"
+                        menuList={templatesMenuItems}
+                        icons={faTableList}
+                    />
+                    <SideMenu
+                        PagesName="Campaigns"
+                        menuList={campaignsMenuItems}
+                        icons={faTableList}
+                    />
 
 
 
 
-                    {/* <ul className="menu">
-      <li className="menu-item display">
-        <a href="javascript:void(0)" className="menu-link right-arrow" onClick={toggleSubMenu}>
-          <span className="menu-icon">
-            <i className="fa-regular fa-envelope"></i>
-            <span className="menu-text side-menu-user"> Email </span>
-          </span>
-          <span className="menu-arrow">
-            <i className="fa-solid fa-chevron-right right-icon side-menu-user"></i>
-          </span>
-        </a>
-
-        <ul className={`sub-menu ${isSubMenuVisible ? '' : 'hidden'}`}>
-          <li className="menu-item">
-            <a href="email-inbox.html" className="menu-link" role="menuitem">
-              <span className="menu-text">Inbox</span>
-            </a>
-          </li>
-          <li className="menu-item">
-            <a href="email-templates.html" className="menu-link">
-              <span className="menu-text">Email Templates</span>
-            </a>
-          </li>
-        </ul>
-      </li>
-    </ul> */}
 
 
                     <ul className="menu">
