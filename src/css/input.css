@@ -1,0 +1,372 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+
+*{
+  margin: 0;
+  padding: 0;
+  
+}
+h5{
+  font-size: inherit;
+  font-weight: 600;
+  font-family: Karla,sans-serif;
+}
+
+/* menu bar start */
+ 
+.logo-box .logo-light {
+    display: none;
+}
+.logo-dark .logo-sm{
+    display: none;
+}
+
+
+.app-menu {
+    color: rgb(108, 117, 125);
+    width: 24%;
+
+    min-width: var(--tw-sidenav-width);
+    background: var(--tw-menu-bg);
+    position: sticky;
+    top: 0;
+    z-index: 40;
+    /* height: 100vh; */
+    --tw-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1),0 1px 2px -1px rgb(0 0 0 / 0.1);
+    --tw-shadow-colored: 0 1px 3px 0 var(--tw-shadow-color),0 1px 2px -1px var(--tw-shadow-color);
+    -webkit-box-shadow: var(--tw-ring-offset-shadow,0 0 #0000),var(--tw-ring-shadow,0 0 #0000),var(--tw-shadow);
+    box-shadow: var(--tw-ring-offset-shadow,0 0 #0000),var(--tw-ring-shadow,0 0 #0000),var(--tw-shadow);
+    -webkit-transition-property: all;
+    transition-property: all;
+    -webkit-transition-timing-function: cubic-bezier(0.4,0,0.2,1);
+    transition-timing-function: cubic-bezier(0.4,0,0.2,1);
+    -webkit-transition-duration: .3s;
+    transition-duration: .3s;
+}
+.logo-dark{
+    justify-content: center;
+    display: flex;
+    padding: 25px 7px;
+  }
+  
+  .all-menus{
+    display: grid;
+    padding: 7px 30px;
+    gap: 18px;
+  }
+
+  .right-arrow{
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .right-arrow .right-icon{
+  font-size: 10px;
+  }
+/* menu bar end */
+.page-content{
+    position: sticky;
+    top: 0;
+    z-index: 35;
+    background: #f3f4f6;
+    height: 70px;
+    width: 100%;
+    border-bottom: #f3f4f6;
+}
+.page-content{
+
+}
+.header-nav{
+  padding-top: 15px;
+
+}
+.toggle-icon{
+  font-size: 16px;
+  color: rgb(108, 117, 125);
+
+}
+
+.dark .toggle-icon:hover {
+  color: #ffffff;        /* Text color for dark mode when hovering */
+}
+ .menu-item:focus .sub-menu  {
+  display: block;
+}
+.hidden {
+  display: none;
+}
+
+.menu .menu-item .menu-link:is(.open,.active,:active,:focus){
+  color: #71b6f9;
+  /* display: flex; */
+}
+
+.menu .menu-item .menu-link:is(.open,.active,:hover){
+  color: #71b6f9;
+  /* display: flex; */
+
+}
+
+.dark .menu .menu-item .menu-link:is(.open, .active, :hover) {
+  color: #ffffff; /* Text color for dark mode when hovering */
+}
+
+
+
+
+
+
+/* .menu-link:focus  { 
+display: block;
+} */
+
+/* navbar */
+/* .text-white{
+  background: rgb(240 80 80);
+  top: 1px;
+} */
+/* .hidden:hover .nav-link{
+  display: block;
+} */
+
+.dark {
+  background-color: #1a202c;
+  color: #ffffff;
+}
+/* .dark {
+  color: #ffffff;
+} */
+
+/* .notification-massage{
+position: absolute;
+left: -18rem;
+top: 3rem;
+} */
+
+
+
+/* progress bar */
+
+
+.card .percent {
+  position: relative;
+}
+
+.card svg {
+  position: relative;
+  width: 151px;
+  left: -26px;
+  top: 40px;
+  height: 112px;
+  transform: rotate(-256deg);
+
+}
+
+.card svg circle {
+  width: 100%;
+  height: 100%;
+  fill: none;
+  stroke: #f0f0f0;
+  stroke-width: 4;
+  stroke-linecap: round;
+}
+
+.card svg circle:last-of-type {
+  stroke-dasharray: 625px;
+  stroke-dashoffset: calc(625px - (625px * var(--percent)) / 100);
+  stroke: #3498db; 
+}
+
+.card .number {
+  position: absolute;
+  top: 106%;
+  left: 16%;
+  transform: translate(-50%, -50%);
+}
+
+.card .number h3 {
+  /* font-weight: 200; */
+  /* font-size: 3.5rem; */
+}
+
+.card .number h3 span {
+  /* font-size: 2rem; */
+}
+
+.card .title h2 {
+  margin: 25px 0 0;
+}
+
+.card:nth-child(1) svg circle:last-of-type {
+        /* stroke: rgba(255, 189, 74, 1); */
+
+  /* stroke: rgb(240, 80, 80); */
+}
+
+.card:nth-child(2) svg circle:last-of-type {
+  stroke: #2ecc71;
+}
+.bg-\[\#ff8acc\].h-2\.5.rounded-full {
+  height: 6px;
+}
+
+.progress-text{
+  position: relative;
+  top: -85px;
+  left: 48px;
+}
+
+
+.w-full.bg-gray-200.rounded-full.h-2\.5.mb-4.dark\:bg-gray-700 {
+  height: 6px;
+}
+.bg-green-500.h-2\.5.rounded-full {
+  height: 6px;
+}
+
+
+/* // morris js */
+
+
+/* // vars */
+$body-bg:   #263238;
+$body-text: #CFD8DC;
+
+.morris-donut-inverse{
+  svg{
+    text[fill="#000000"]{
+      fill: $body-text;
+    }
+    path[stroke="#ffffff"]{
+      stroke: $body-bg;
+    }
+  }
+}
+
+
+.color-pink{
+  background: #ff8acc;
+  padding: 0px 10px;
+  border-radius: 15px;
+}
+.color-blue{
+  background: #35b8e0;
+  padding: 0px 10px;
+  border-radius: 15px;
+}
+
+
+/* Set the width of the scrollbar */
+
+.scrollable {
+  overflow-y: scroll;  /* Add a vertical scrollbar */
+  scrollbar-width: thin;  /* For Firefox */
+  scrollbar-color: transparent transparent;  /* For Firefox - set the scrollbar track and thumb color */
+  scrollbar-color: #007 #bada55;
+}
+
+/* For WebKit browsers (such as Chrome, Safari) */
+.scrollable::-webkit-scrollbar {
+  width: 5px;  /* Adjust the width to make it thinner or wider */
+}
+
+/* For Internet Explorer and Edge */
+.scrollable::-ms-scrollbar {
+  width: 5px;  /* Adjust the width to make it thinner or wider */
+}
+
+/* Optional: Set the color of the scrollbar thumb (handle) */
+.scrollable::-webkit-scrollbar-thumb {
+  background-color: #cbcbcb;  /* Change the color to your preference */
+
+}
+
+/* Optional: Set the color of the scrollbar track */
+.scrollable::-webkit-scrollbar-track {
+  background-color: #f1f1f1;  /* Change the color to your preference */
+}
+
+  /* Dark mode styles */
+  body.dark .scrollable::-webkit-scrollbar-thumb {
+    background-color: rgb(48, 65, 88); /* Red color for dark mode */
+  }
+
+  body.dark .scrollable::-webkit-scrollbar-track {
+    background-color: #1a202c /* Dark background color for dark mode */
+  }
+
+
+  /* main content scroll */
+  .main-content-scroll::-webkit-scrollbar-track {
+    background-color: #f1f1f1;  /* Change the color to your preference */
+  }
+ 
+  body.dark .main-content-scroll::-webkit-scrollbar-thumb {
+    background-color: #686868; /* Red color for dark mode */
+  }
+
+  body.dark .main-content-scroll::-webkit-scrollbar-track {
+    background-color: #686868 /* Dark background color for dark mode */
+  }
+
+  /* inbox */
+
+  /* Define styles for the hover effect when not in dark mode */
+  .project-first:hover {
+    background-color: rgb(55 65 81 / .4); /* Red background color for hover effect */
+  }
+
+  /* Define styles for the hover effect in dark mode */
+  .dark .project-first:hover {
+    background-color: rgb(55 65 81 / .4); /* Dark red background color for hover effect in dark mode */
+  }
+
+
+/* header dark mode */
+
+      /* Your default styles for app-header */
+      .app-header {
+        background-color: #f3f4f6;
+        /* Add other styles as needed */
+    }
+    .total-revenue{
+      background: white;
+    }
+
+    body.dark .total-revenue{
+      background-color: #1f2937;
+      color: white;
+    }
+
+    /* Styles for app-header when body has the "dark" class */
+    body.dark .app-header  {
+        background-color: black;
+        color: white; /* Set the text color to white or another color that contrasts well with black */
+        /* Add other styles as needed */
+    }
+
+    .revenue-nub{
+    width: 52%;
+    display: inline-block;
+    }
+
+
+/* Drop Down Styles
+================================ */
+/* Dropdown Button */
+
+/* Funnel chart */
+
+i.fa-brands.fa-telegram.block.mx-auto.w-1\/3.rounded-full.sm\:mx-0.sm\:shrink-0 {
+  font-size: 41px;
+}
+/* 
+.menu-icon{
+    display: flex;
+    gap: 10px;
+    align-items: center;
+} */
+
