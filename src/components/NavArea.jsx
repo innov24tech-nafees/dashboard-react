@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from 'react';
 
 import userS from '../img/user-11.jpg';
 import userT from '../img/user-2.jpg';
@@ -8,58 +8,53 @@ import userFive from '../img/user-5.jpg';
 function NavArea(){
 
 // dark mode
-
-
-
-document.addEventListener("DOMContentLoaded", function () {
+useEffect(() => {
     const toggleButton = document.getElementById('dark-mode-toggle');
     const body = document.body;
   
     const moonIcon = document.querySelector('.fa-moon');
     const sunIcon = document.querySelector('.fa-sun');
   
-    
-  
     // Check local storage for user preference
     if (localStorage.getItem('dark-mode') === 'enabled') {
-        body.classList.add('dark');
-        moonIcon.style.display = 'none';
-        sunIcon.style.display = 'block';
+      enableDarkMode();
     }
   
     toggleButton.addEventListener('click', () => {
-        body.classList.toggle('dark');
-        moonIcon.style.display = body.classList.contains('dark') ? 'none' : 'block';
-        sunIcon.style.display = body.classList.contains('dark') ? 'block' : 'none';
+      body.classList.toggle('dark');
+      moonIcon.style.display = body.classList.contains('dark') ? 'none' : 'block';
+      sunIcon.style.display = body.classList.contains('dark') ? 'block' : 'none';
   
-        if (body.classList.contains('dark')) {
-            localStorage.setItem('dark-mode', 'enabled');
-        } else {
-            localStorage.setItem('dark-mode', 'disabled');
-        }
-        
-        // Toggle background color for app-header and other elements
-        const appHeader = document.querySelector('.app-header');
-        appHeader.classList.toggle('dark');
+      if (body.classList.contains('dark')) {
+        localStorage.setItem('dark-mode', 'enabled');
+      } else {
+        localStorage.setItem('dark-mode', 'disabled');
+      }
   
-        const pageContent = document.querySelector('.page-content');
-        pageContent.classList.toggle('dark-background');
+      // Toggle background color for other elements
+      const appHeader = document.querySelector('.app-header');
+      appHeader.classList.toggle('dark');
   
-        const TotalRevenue  = document.querySelector(".tatal-revenue");
-        TotalRevenue.classList.toggle('dark');
+      const pageContent = document.querySelector('.page-content');
+      pageContent.classList.toggle('dark-background');
   
-        const projectFirstRow = document.querySelector(".project-first");
-        // projectFirstRow.classList.toggle("hover:bg-gray-50");
-          projectFirstRow.classList.toggle("dark:hover:bg-rgb(55 65 81 / .4)");
+      const totalRevenue = document.querySelector(".total-revenue");
+      totalRevenue.classList.toggle('dark');
   
-  
+      const projectFirstRow = document.querySelector(".project-first");
+      projectFirstRow.classList.toggle("dark:hover:bg-rgb(55 65 81 / .4)");
     });
-  
-  
-  });
-  
+  }, []); // Empty dependency array ensures the effect runs only once on mount
 
-    
+  const enableDarkMode = () => {
+    const body = document.body;
+    const moonIcon = document.querySelector('.fa-moon');
+    const sunIcon = document.querySelector('.fa-sun');
+
+    body.classList.add('dark');
+    moonIcon.style.display = 'none';
+    sunIcon.style.display = 'block';
+  };
 
     return(
 

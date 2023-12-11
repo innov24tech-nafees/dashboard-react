@@ -170,19 +170,19 @@ function Topbar() {
                                             className=" left-1/2 top-80 absolute left-439.5 top-921 bg-white shadow rounded border dark:border-slate-700 fc-dropdown-open:translate-y-0 translate-y-3 origin-center transition-all duration-300 py-2 dark:bg-gray-800 fc-dropdown hidden"
                                         >
                                             <a className="flex items-center py-1.5 px-5 text-sm transition-all duration-300 bg-transparent text-gray-800 dark:text-white hover:bg-stone-100 dark:hover:bg-slate-700 dark:hover:text-gray-200"
-                                                href="javascript:void(0)">
+                                                href="#">
                                                 Action
                                             </a>
                                             <a className="flex items-center py-1.5 px-5 text-sm transition-all duration-300 bg-transparent text-gray-800 dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 dark:hover:text-gray-300"
-                                                href="javascript:void(0)">
+                                                href="#">
                                                 Another action
                                             </a>
                                             <a className="flex items-center py-1.5 px-5 text-sm transition-all duration-300 bg-transparent text-gray-800 dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 dark:hover:text-gray-300"
-                                                href="javascript:void(0)">
+                                                href="#">
                                                 Something else
                                             </a>
                                             <a className="flex items-center py-1.5 px-5 text-sm transition-all duration-300 bg-transparent text-gray-800 dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 dark:hover:text-gray-300"
-                                                href="javascript:void(0)">
+                                                href="#">
                                                 Separated link
                                             </a>
                                         </div>
@@ -279,19 +279,19 @@ function Topbar() {
                                             <div id="dropdown-target6"
                                                 className="hidden bg-white shadow rounded border dark:border-slate-700 fc-dropdown-open:translate-y-0 translate-y-3 origin-center transition-all duration-300 py-2 dark:bg-gray-800 fc-dropdown">
                                                 <a className="flex items-center py-1.5 px-5 text-sm transition-all duration-300 bg-transparent text-gray-800 dark:text-white hover:bg-stone-100 dark:hover:bg-slate-700 dark:hover:text-gray-200"
-                                                    href="javascript:void(0)">
+                                                    href="#">
                                                     Action
                                                 </a>
                                                 <a className="flex items-center py-1.5 px-5 text-sm transition-all duration-300 bg-transparent text-gray-800 dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 dark:hover:text-gray-300"
-                                                    href="javascript:void(0)">
+                                                    href="#">
                                                     Another action
                                                 </a>
                                                 <a className="flex items-center py-1.5 px-5 text-sm transition-all duration-300 bg-transparent text-gray-800 dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 dark:hover:text-gray-300"
-                                                    href="javascript:void(0)">
+                                                    href="#">
                                                     Something else
                                                 </a>
                                                 <a className="flex items-center py-1.5 px-5 text-sm transition-all duration-300 bg-transparent text-gray-800 dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 dark:hover:text-gray-300"
-                                                    href="javascript:void(0)">
+                                                    href="#">
                                                     Separated link
                                                 </a>
                                             </div>

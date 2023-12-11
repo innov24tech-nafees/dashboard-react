@@ -12,7 +12,7 @@ function Leads(){
         <>
        <ul className="menu">
       <li className="menu-item display">
-        <a href="javascript:void(0)" className="menu-link right-arrow" onClick={toggleSubMenu}>
+        <a href="#" className="menu-link right-arrow" onClick={toggleSubMenu}>
           <span className="menu-icon">
             <i className="fa-regular fa-envelope"></i>
             <span className="menu-text side-menu-user">Leads </span>

@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 import D3Funnel from 'd3-funnel';
 
+
 // import * as ReactDOM from "react-dom";
 
 
@@ -38,12 +39,6 @@ const options = {
 
 const chart = new D3Funnel('#funnel');
 chart.draw(data, options);
-
-
-  
-
-
-
 
 
 return () => {

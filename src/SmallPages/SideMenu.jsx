@@ -17,7 +17,7 @@ function SideMenu(Props) {
     <>
       <ul className="menu">
         <li className="menu-item display">
-          <a href="javascript:void(0)" className="menu-link right-arrow" onClick={toggleSubMenu}>
+          <a href="#" className="menu-link right-arrow" onClick={toggleSubMenu}>
             <span className="menu-icon flex gap-2 items-center">
               <FontAwesomeIcon icon={icons} />
               <span className="menu-text side-menu-user">{PagesName}</span>

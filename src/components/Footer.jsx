@@ -14,11 +14,11 @@ function Footer() {
                                 href="https://coderthemes.com/" target="_blank">Coderthemes</a>
                         </div>
                         <div className="md:flex hidden gap-4 item-center md:justify-end">
-                            <a href="javascript: void(0);"
+                            <a href="#"
                                 className="text-sm leading-5 text-zinc-600 transition hover:text-zinc-900 dark:text-zinc-400 dark:hover:text-white">About</a>
-                            <a href="javascript: void(0);"
+                            <a href="#"
                                 className="text-sm leading-5 text-zinc-600 transition hover:text-zinc-900 dark:text-zinc-400 dark:hover:text-white">Help</a>
-                            <a href="javascript: void(0);"
+                            <a href="#"
                                 className="text-sm leading-5 text-zinc-600 transition hover:text-zinc-900 dark:text-zinc-400 dark:hover:text-white">Contact
                                 Us</a>
                         </div>

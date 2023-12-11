@@ -1,15 +1,15 @@
-import React from "react";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+// import React from "react";
+// import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
-function IconLocation(){
+// function IconLocation(){
 
-    return(
+//     return(
 
-        <>
+//         <>
 
-        <FontAwesomeIcon icon="fa-solid fa-location-crosshairs" />
+//         <FontAwesomeIcon icon="fa-solid fa-location-crosshairs" />
 
-        </>
-    )
-}
-export default IconLocation;
+//         </>
+//     )
+// }
+// export default IconLocation;

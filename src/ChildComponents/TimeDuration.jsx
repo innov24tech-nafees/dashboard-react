@@ -1,5 +1,5 @@
 import React from "react";
-import userS from '../img/user-11.jpg';
+// import userS from '../img/user-11.jpg';
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCoffee, faHeart, faStar } from "@fortawesome/free-solid-svg-icons";
